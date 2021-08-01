@@ -1,3 +1,6 @@
+Usage:
+    ```sbt run```, ``` sbt test ```
+
     Write a program that prints one line for each number 
     from 1 to 100
     
