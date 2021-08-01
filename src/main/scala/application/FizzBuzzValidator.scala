@@ -6,7 +6,7 @@ package application
         .map(evaluateNumber)
         .toList
 
-    private def evaluateNumber : Int => String = _ match {
+    def evaluateNumber : Int => String = _ match {
       case n if isBuzzFizz(n) => "FizzBuzz"
       case n if isFizz(n) => "Fizz"
       case n if isBuzz(n) => "Buzz"
