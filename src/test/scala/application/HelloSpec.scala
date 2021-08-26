@@ -1,6 +1,6 @@
 package application
 
-import application.FizzBuzzValidator.checkRange
+import application.FizzBuzzValidator.evaluateRange
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 
@@ -10,28 +10,28 @@ class HelloSpec extends AnyWordSpec with Matchers {
 
     "normal number" should {
       "print the normal number for 1 to 2" in{
-        checkRange(1 to 2) shouldBe List("1", "2")
+        evaluateRange(1 to 2) shouldBe List("1", "2")
       }
       "print the normal number for 4" in{
-        checkRange(4 to 4) shouldBe List("4")
+        evaluateRange(4 to 4) shouldBe List("4")
       }
       "print the normal number for 4 to 6" in{
-        checkRange(7 to 8) shouldBe List("7", "8")
+        evaluateRange(7 to 8) shouldBe List("7", "8")
       }
     }
     "multiple of three" should {
       "return Fizz instead of the number" in {
-        checkRange(1 to 3) shouldBe List("1", "2", "Fizz")
+        evaluateRange(1 to 3) shouldBe List("1", "2", "Fizz")
       }
     }
     "multiple of five" should {
       "return Buzz instead of the number" in {
-        checkRange(1 to 5) shouldBe List("1", "2", "Fizz", "4", "Buzz")
+        evaluateRange(1 to 5) shouldBe List("1", "2", "Fizz", "4", "Buzz")
       }
     }
     "multiple of both three and five" should{
       "print FizzBuzz instead of the number" in {
-        checkRange(1 to 15) shouldBe
+        evaluateRange(1 to 15) shouldBe
           List("1","2","Fizz","4","Buzz",
             "Fizz", "7", "8", "Fizz", "Buzz",
             "11", "Fizz", "13", "14", "FizzBuzz")
